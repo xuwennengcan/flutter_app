@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/MyGrid.dart';
+import 'package:flutter_app/MyRow.dart';
 
 void main() => runApp(new MyApp());
 
@@ -10,7 +10,8 @@ class MyApp extends StatelessWidget{
       return MaterialApp(
         title: 'Your Are My Love',
         home: Scaffold(
-          body: MyGrid()
+          appBar: new AppBar(title: new Text("水平方向布局"),),
+          body: MyRow()
         ),
       );
   }
