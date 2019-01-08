@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/MyGrid.dart';
 import 'package:flutter_app/MyList.dart';
-import 'package:flutter_app/MyRow.dart';
+import 'package:flutter_app/MyArray.dart';
 
 void main() => runApp(new HomePage());
 
@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
             children: <Widget>[
               new MyList(),
               new MyGrid(),
-              new MyRow(),
+              new MyArray(),
             ]),
         bottomNavigationBar: new Material(
           color: Colors.orangeAccent,
@@ -39,8 +39,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
               controller: _tabController,
               tabs: <Tab>[
                 new Tab(text: "List",icon: new Icon(Icons.list),),
-                new Tab(text: "grid",icon: new Icon(Icons.grade),),
-                new Tab(text: "row",icon: new Icon(Icons.rowing),)
+                new Tab(text: "grid",icon: new Icon(Icons.group),),
+                new Tab(text: "array",icon: new Icon(Icons.view_array),)
               ]),
         ),
       ),
