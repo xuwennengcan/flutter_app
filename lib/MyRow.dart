@@ -8,15 +8,14 @@ class MyRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Row(
+    return new Column(
       children: <Widget>[
         new RaisedButton(
-          onPressed: _pressButton("点击绿色按钮"), color: Colors.green,child: new Text("绿色按钮"),padding: ,),
+          onPressed: (){_pressButton("点击绿色按钮");}, color: Colors.green,child: new Text("绿色按钮"),padding: EdgeInsets.all(10.0),),
         new RaisedButton(
-          onPressed: _pressButton("点击红色按钮"), color: Colors.red,child: new Text("红色按钮"),),
+          onPressed: (){_pressButton("点击红色按钮");}, color: Colors.red,child: new Text("红色按钮"),padding: EdgeInsets.all(10.0),),
         new RaisedButton(
-          onPressed: _pressButton("点击黄色按钮"), color: Colors.yellow,child: new Text("黄色按钮"),)
-
+          onPressed: (){_pressButton("点击黄色按钮");}, color: Colors.yellow,child: new Text("黄色按钮"),padding: EdgeInsets.all(10.0),)
       ],
     );
   }
