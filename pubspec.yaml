@@ -25,6 +25,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+flutter_screenutil: ^0.4.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
@@ -46,8 +47,29 @@ flutter:
   - images/drawable-xxhdpi/tag_icon_information_s.png
   - images/drawable-xxhdpi/tag_icon_my_chick.png
   - images/drawable-xxhdpi/tag_icon_my_default.png
-  - images/drawable-xxhdpi/tag_icon_radio_chick.png
+  - images/drawable-xxhdpi/tag_icon_radio_click.png
   - images/drawable-xxhdpi/tag_icon_radio_default.png
+  - images/bottom-gif/tag_icon_radio_gif_00000.png
+  - images/bottom-gif/tag_icon_radio_gif_00001.png
+  - images/bottom-gif/tag_icon_radio_gif_00002.png
+  - images/bottom-gif/tag_icon_radio_gif_00003.png
+  - images/bottom-gif/tag_icon_radio_gif_00004.png
+  - images/bottom-gif/tag_icon_radio_gif_00005.png
+  - images/bottom-gif/tag_icon_radio_gif_00006.png
+  - images/bottom-gif/tag_icon_radio_gif_00007.png
+  - images/bottom-gif/tag_icon_radio_gif_00008.png
+  - images/bottom-gif/tag_icon_radio_gif_00009.png
+  - images/bottom-gif/tag_icon_radio_gif_00010.png
+  - images/bottom-gif/tag_icon_radio_gif_00011.png
+  - images/bottom-gif/tag_icon_radio_gif_00012.png
+  - images/bottom-gif/tag_icon_radio_gif_00013.png
+  - images/bottom-gif/tag_icon_radio_gif_00014.png
+  - images/bottom-gif/tag_icon_radio_gif_00015.png
+  - images/bottom-gif/tag_icon_radio_gif_00016.png
+  - images/bottom-gif/tag_icon_radio_gif_00017.png
+  - images/bottom-gif/tag_icon_radio_gif_00018.png
+  - images/bottom-gif/tag_icon_radio_gif_00019.png
+  - images/bottom-gif/tag_icon_radio_gif_00020.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg
