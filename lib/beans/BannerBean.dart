@@ -11,8 +11,8 @@ class BannerBean {
       text,
       maxLines: 3,
       style: new TextStyle(
-        fontSize: 12.0,
-        color: Colors.black
+          fontSize: 12.0,
+          color: Colors.black
       ),
     );
 
