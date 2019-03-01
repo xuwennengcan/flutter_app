@@ -24,8 +24,8 @@ class BottomFrameAnimationImage extends StatefulWidget {
 class _BottomFrameAnimationImageState extends State<BottomFrameAnimationImage>
     with SingleTickerProviderStateMixin {
 
-  AnimationController _controller;
-  Animation<double> _animation;
+  AnimationController _controller; //动画控制器
+  Animation<double> _animation; //动画集
 
   @override
   void initState() {
