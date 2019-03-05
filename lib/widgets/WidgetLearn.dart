@@ -132,7 +132,7 @@ class _WidgetLearnState extends State<WidgetLearn>
     return MaterialApp(
       home: new Scaffold(
         body: new TabBarView(children: <Widget>[
-          new BannerWidget(bannerList: _bannerList,bannerHeight: 100.0,bannerDuration: 300,
+          new BannerWidget(bannerList: _bannerList,bannerHeight: 100.0,bannerDuration: 1000,
              ),
 
         ], controller: _tabController,),

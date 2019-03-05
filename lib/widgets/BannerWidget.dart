@@ -38,7 +38,7 @@ class _BannerState extends State<BannerWidget> {
   PageController _pageController;
 
   //当前下标
-  int currentIndex;
+  int currentIndex = 0;
 
   @override
   void initState() {
@@ -58,7 +58,7 @@ class _BannerState extends State<BannerWidget> {
               _pageController.page != null) {
             _pageController.animateToPage(
                 _pageController.page.toInt() + 1,
-                duration: Duration(milliseconds: 300), curve: Curves.linear);
+                duration: Duration(milliseconds: 1000), curve: Curves.linear);
           }
         });
   }
@@ -95,13 +95,13 @@ class _BannerState extends State<BannerWidget> {
         controller: _pageController,
         onPageChanged: onPageChanged,
         itemBuilder: (context, index) {
-          return InkWell(
+          return InkWell( //水波纹控件
             onTap: () { //触发banner点击事件
               if (widget.bannerItemClick != null) {
                 widget.bannerItemClick(index, widget.bannerList[currentIndex]);
               }
             },
-            child: widget.bannerList[currentIndex].textWidget,
+            child: new Image.network(widget.bannerList[currentIndex].image,width: 300.0,height: 300.0,fit: BoxFit.cover),
           );
         }
 
