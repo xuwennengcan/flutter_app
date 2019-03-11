@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/MyArray.dart';
+import 'package:flutter_app/MyGrid.dart';
+import 'package:flutter_app/MyList.dart';
 import 'package:flutter_app/beans/BannerBean.dart';
 import 'package:flutter_app/widgets/BannerWidget.dart';
 
@@ -16,11 +19,11 @@ class WidgetLearn extends StatefulWidget {
 }
 
 class _WidgetLearnState extends State<WidgetLearn>
-    with SingleTickerProviderStateMixin {
+    with TickerProviderStateMixin {
 
-  int _tab_index = 0;
-  var _tab_titles = ["首页", "社区", "直播", "消息", "我的"];
-  var _tab_images;
+  int _tabIndex = 0;
+  var _tabTitles = ["首页", "社区", "直播", "消息", "我的"];
+  var _tabImages;
 
   final List<String> _bottomImages = [
     /*'images/bottom-gif/tag_icon_radio_gif_00000.png',
@@ -53,8 +56,11 @@ class _WidgetLearnState extends State<WidgetLearn>
   //Tab控制器
   TabController _tabController;
 
+  //页面集合
+  var _pageList;
+
   void initData() {
-    _tab_images = [
+    _tabImages = [
       [
         getTabImage('images/drawable-xxhdpi/tag_icon_home_default.png'),
         getTabImage('images/drawable-xxhdpi/tag_icon_home_click.png')
@@ -79,22 +85,36 @@ class _WidgetLearnState extends State<WidgetLearn>
     ];
 
     _bannerList.add(BannerBean.createBannerBean(
-        'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1551440172573&di=cba5745b137f49b1f76b6733cfd8b3fb&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F012e1159963329a8012156039f99be.jpg%402o.jpg'
-        , "使用alignment配合FractionalOffset：对于FractionalOffset的参数，我是这么理解的：相当于比例，第一个代表横向的权重，第二个代表竖向的权重，横0.9代表在横向十分之九的位置，竖0.1代表在竖向十分之一的位置"));
+        'https://static.dingtalk.com/media/lALPDgQ9qiZc1nPNAmbNA-Y_998_614.png'
+        ,
+        "使用alignment配合FractionalOffset：对于FractionalOffset的参数，我是这么理解的：相当于比例"
+            "，第一个代表横向的权重，第二个代表竖向的权重，横0.9代表在横向十分之九的位置，竖0.1代表在竖向十分之一的位置"));
     _bannerList.add(BannerBean.createBannerBean(
-        'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1551440172573&di=cba5745b137f49b1f76b6733cfd8b3fb&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F012e1159963329a8012156039f99be.jpg%402o.jpg'
-        , "这个函数严格意义上来讲不属于生命周期的一部分，因为这个时候State的widget属性为空，无法在构造函数中访问widget的属性 。但是构造函数必然是要第一个调用的。可以在这一部分接收前一个页面传递过来的数据。"));
+        'https://static.dingtalk.com/media/lALPDgQ9qiZendDNAobNA90_989_646.png_620x10000q90g.jpg'
+        ,
+        "这个函数严格意义上来讲不属于生命周期的一部分，因为这个时候State的widget属性为空，无法在构造函数中访问widget的属性 。"
+            "但是构造函数必然是要第一个调用的。可以在这一部分接收前一个页面传递过来的数据。"));
+
+    _pageList = [
+      new BannerWidget(
+        bannerList: _bannerList, bannerHeight: 100.0, bannerDuration: 1000,
+      ),
+      new MyList(),
+      new BottomFrameAnimationImage(_bottomImages, 32.0, 32.0, 1000),
+      new MyGrid(),
+      new MyArray(),
+    ];
 
     _tabController = new TabController(length: 5, vsync: this);
   }
 
   //获取Tab的文本
   Text getTabText(int currentIndex) {
-    if (_tab_index == currentIndex) {
-      return new Text(_tab_titles[currentIndex],
+    if (_tabIndex == currentIndex) {
+      return new Text(_tabTitles[currentIndex],
         style: new TextStyle(fontSize: 11.0, color: const Color(0xffFF495C)),);
     } else {
-      return new Text(_tab_titles[currentIndex],
+      return new Text(_tabTitles[currentIndex],
         style: new TextStyle(fontSize: 11.0, color: const Color(0xff999999)),);
     }
   }
@@ -110,10 +130,10 @@ class _WidgetLearnState extends State<WidgetLearn>
 
   //获取Tab的图标
   Widget getTabIcon(int currentIndex) {
-    if (_tab_index == currentIndex) {
-      return _tab_images[currentIndex][1];
+    if (_tabIndex == currentIndex) {
+      return _tabImages[currentIndex][1];
     } else
-      return _tab_images[currentIndex][0];
+      return _tabImages[currentIndex][0];
   }
 
   //获取底部导航栏
@@ -126,24 +146,24 @@ class _WidgetLearnState extends State<WidgetLearn>
     return list;
   }
 
+
+
   @override
   Widget build(BuildContext context) {
     initData();
     return MaterialApp(
       home: new Scaffold(
         body: new TabBarView(children: <Widget>[
-          new BannerWidget(bannerList: _bannerList,bannerHeight: 100.0,bannerDuration: 1000,
-             ),
-
+          _pageList[_tabIndex]
         ], controller: _tabController,),
 
         bottomNavigationBar: new BottomNavigationBar(
             items: getBottoms(5),
             type: BottomNavigationBarType.fixed,
-            currentIndex: _tab_index,
+            currentIndex: _tabIndex,
             onTap: (index) {
               setState(() {
-                _tab_index = index;
+                _tabIndex = index;
               });
             }
         ),

@@ -4,9 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/beans/BannerBean.dart';
 
 //点击事件回调
-typedef void onBannerItemClick(int position, BannerBean bean);
-
-typedef Widget CustomBuild(int position, BannerBean bean);
+typedef void OnBannerItemClick(int position, BannerBean bean);
 
 //最大值
 const MAX_COUNT = 0x7fffffff;
@@ -16,11 +14,10 @@ class BannerWidget extends StatefulWidget {
   final List<BannerBean> bannerList;
   final double bannerHeight;
   final int bannerDuration;
-  final onBannerItemClick bannerItemClick;
-  final CustomBuild customBuild;
+  final OnBannerItemClick bannerItemClick;
 
   BannerWidget({Key key,@required this.bannerList, this.bannerHeight, this.bannerDuration,
-      this.bannerItemClick, this.customBuild}):super(key : key);
+      this.bannerItemClick}):super(key : key);
 
   @override
   State<StatefulWidget> createState() {
@@ -101,7 +98,7 @@ class _BannerState extends State<BannerWidget> {
                 widget.bannerItemClick(index, widget.bannerList[currentIndex]);
               }
             },
-            child: new Image.network(widget.bannerList[currentIndex].image,width: 300.0,height: 300.0,fit: BoxFit.cover),
+            child: new Image.network(widget.bannerList[currentIndex].image,width: 300.0,height: 300.0,fit: BoxFit.fitWidth),
           );
         }
 
@@ -111,7 +108,6 @@ class _BannerState extends State<BannerWidget> {
   onPageChanged(index) {
     currentIndex = index % widget.bannerList.length;
     setState(() {
-
     });
   }
 

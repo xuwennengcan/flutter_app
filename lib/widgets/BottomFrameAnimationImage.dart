@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-/**
+/*
  * create by can on 2019/2/28
  * Flutter实现帧动画
- */
+*/
+
 class BottomFrameAnimationImage extends StatefulWidget {
 
   final List<String> _assetList; //图片集合
@@ -22,7 +23,7 @@ class BottomFrameAnimationImage extends StatefulWidget {
 }
 
 class _BottomFrameAnimationImageState extends State<BottomFrameAnimationImage>
-    with SingleTickerProviderStateMixin {
+    with TickerProviderStateMixin {
 
   AnimationController _controller; //动画控制器
   Animation<double> _animation; //动画集

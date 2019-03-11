@@ -19,4 +19,9 @@ class BannerBean {
     bean.textWidget = textWidget;
     return bean;
   }
+
+  static String getDetail(String a ,res , {branch = "master"}){
+      res = "sb";
+
+  }
 }
