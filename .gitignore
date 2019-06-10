@@ -7,3 +7,9 @@
 build/
 
 .flutter-plugins
+*.iml
+/.idea
+.idea
+*/build
+*/*/build
+/local.properties
