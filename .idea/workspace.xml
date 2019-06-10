@@ -5,11 +5,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afba5e89-9be2-43bd-83eb-5536b826b716" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app.iml" afterDir="false" />
-    </list>
+    <list default="true" id="afba5e89-9be2-43bd-83eb-5536b826b716" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
     <ignored path="$PROJECT_DIR$/.pub/" />
@@ -28,20 +24,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pubspec.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
+            <state>
               <caret line="27" column="18" selection-start-line="27" selection-end-line="27" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/widgets/WidgetLearn.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="158" selection-start-line="158" selection-end-line="158" />
+            <state relative-caret-position="-185">
+              <caret line="123" column="25" selection-start-line="123" selection-start-column="25" selection-end-line="123" selection-end-column="25" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -189,6 +194,7 @@
         <option value="$PROJECT_DIR$/lib/widgets/BannerWidget.dart" />
         <option value="$PROJECT_DIR$/lib/widgets/BottomFrameAnimationImage.dart" />
         <option value="$PROJECT_DIR$/lib/beans/BannerBean.dart" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -208,7 +214,40 @@
     <panes>
       <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="flutter_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter_app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter_app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter_app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="beans" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter_app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter_app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="widgets" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -534,9 +573,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Resources Explorer" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4896789" visible="true" weight="0.17910448" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4896789" visible="true" weight="0.17910448" />
       <window_info id="Structure" order="1" weight="0.2497332" />
       <window_info id="Build Variants" order="2" sideWeight="0.5103211" side_tool="true" weight="0.18089648" />
       <window_info id="Capture Tool" order="3" />
@@ -556,9 +596,9 @@
       <window_info anchor="bottom" id="Dart Analysis" order="8" weight="0.32683486" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32912844" />
       <window_info anchor="bottom" id="Logcat" order="10" sideWeight="0.49359658" weight="0.51261467" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.28674698" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.28619152" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5064034" side_tool="true" weight="0.51376146" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32798165" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32739422" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -588,7 +628,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../flutter/packages/flutter/lib/src/material/icons.dart" />
     <entry file="file://$PROJECT_DIR$/../flutter/packages/flutter/lib/src/painting/basic_types.dart" />
     <entry file="file://$PROJECT_DIR$/../flutter/packages/flutter/lib/src/rendering/sliver_grid.dart" />
     <entry file="file://$PROJECT_DIR$/../flutter/packages/flutter/lib/src/widgets/scroll_view.dart" />
@@ -646,13 +685,6 @@
     <entry file="file://$PROJECT_DIR$/../../../Flutter/flutter/packages/flutter/lib/src/widgets/basic.dart" />
     <entry file="file://$PROJECT_DIR$/../../../Flutter/flutter/packages/flutter/lib/src/material/scaffold.dart" />
     <entry file="file://$PROJECT_DIR$/../../../Flutter/flutter/packages/flutter/lib/src/widgets/container.dart" />
-    <entry file="file://$PROJECT_DIR$/pubspec.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="75" column="9" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../Flutter/flutter/bin/cache/pkg/sky_engine/lib/async/timer.dart" />
     <entry file="file://$PROJECT_DIR$/../../../Flutter/flutter/packages/flutter/lib/src/material/ink_well.dart" />
     <entry file="file://$PROJECT_DIR$/../../../Flutter/flutter/packages/flutter/lib/src/widgets/banner.dart" />
@@ -661,13 +693,6 @@
     <entry file="file://$PROJECT_DIR$/../../../Flutter/flutter/packages/flutter/lib/src/widgets/binding.dart" />
     <entry file="file://$PROJECT_DIR$/../../../Flutter/flutter/packages/flutter/lib/src/widgets/bottom_navigation_bar_item.dart" />
     <entry file="file://$PROJECT_DIR$/../../../Flutter/flutter/packages/flutter/lib/src/material/tab_controller.dart" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/MyArray.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -683,7 +708,7 @@
     <entry file="file://$PROJECT_DIR$/../../../Flutter/flutter/packages/flutter/lib/src/animation/animation_controller.dart" />
     <entry file="file://$PROJECT_DIR$/pubspec.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
+        <state>
           <caret line="27" column="18" selection-start-line="27" selection-end-line="27" selection-end-column="18" />
         </state>
       </provider>
@@ -756,11 +781,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/widgets/WidgetLearn.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="158" selection-start-line="158" selection-end-line="158" />
+        <state relative-caret-position="-185">
+          <caret line="123" column="25" selection-start-line="123" selection-start-column="25" selection-end-line="123" selection-end-column="25" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/runConfigurations/main_dart.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pubspec.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-470">
+          <caret line="75" column="9" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
         </state>
       </provider>
     </entry>
