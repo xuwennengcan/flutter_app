@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/MyArray.dart';
-import 'package:flutter_app/MyGrid.dart';
-import 'package:flutter_app/MyList.dart';
+import 'package:flutter_app/widgets/BottomFrameAnimationImage.dart';
+import 'package:flutter_app/widgets/MyArray.dart';
+import 'package:flutter_app/widgets/MyGrid.dart';
+import 'package:flutter_app/widgets/MyList.dart';
 import 'package:flutter_app/beans/BannerBean.dart';
 import 'package:flutter_app/widgets/BannerWidget.dart';
-
-import 'BottomFrameAnimationImage.dart';
-
 
 void main() => runApp(new WidgetLearn());
 

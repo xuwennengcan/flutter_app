@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/MyGrid.dart';
-import 'package:flutter_app/MyList.dart';
-import 'package:flutter_app/MyArray.dart';
+import 'package:flutter_app/widgets/MyGrid.dart';
+import 'package:flutter_app/widgets/MyList.dart';
+import 'package:flutter_app/widgets/MyArray.dart';
 
 void main() => runApp(new HomePage());
 

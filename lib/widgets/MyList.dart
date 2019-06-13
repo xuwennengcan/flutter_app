@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/TopReminder.dart';
+import 'package:flutter_app/widgets/TopReminder.dart';
 
 class MyList extends  StatelessWidget{
 
