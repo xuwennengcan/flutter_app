@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/widgets/IconDemoWidget.dart';
 
 void main() => runApp(FlutterLayout());
 
@@ -13,7 +14,31 @@ class FlutterLayout extends StatefulWidget {
 class _FlutterLayoutState extends State<FlutterLayout> {
   @override
   Widget build(BuildContext context) {
-    return newColumn();
+    return new Material(
+      child: new Column(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          new Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            textDirection: TextDirection.ltr,
+            children: <Widget>[
+              IconDemoWidget(
+                text: "998",
+                iconData: Icons.star,
+              ),
+              IconDemoWidget(
+                text: "1000",
+                iconData: Icons.face,
+              )
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }
 
