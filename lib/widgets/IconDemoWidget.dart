@@ -16,7 +16,7 @@ class IconDemoWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         newIcon(iconData),
-        new Padding(padding: EdgeInsets.all(10)),
+        new Padding(padding: EdgeInsets.all(5)),
         newText(text)
       ],
     ));

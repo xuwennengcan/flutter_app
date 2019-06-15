@@ -14,35 +14,11 @@ class FlutterLayout extends StatefulWidget {
 class _FlutterLayoutState extends State<FlutterLayout> {
   @override
   Widget build(BuildContext context) {
-    return new Material(
-      child: new Column(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          new Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            textDirection: TextDirection.ltr,
-            children: <Widget>[
-              IconDemoWidget(
-                text: "998",
-                iconData: Icons.star,
-              ),
-              IconDemoWidget(
-                text: "1000",
-                iconData: Icons.face,
-              )
-            ],
-          ),
-        ],
-      ),
-    );
+    return _demoPage();
   }
 }
 
-//Container布局
+///Container布局
 Widget newContainer() {
   return Container(
     //四周margin为20
@@ -64,7 +40,7 @@ Widget newContainer() {
   );
 }
 
-//Column
+///Column
 Widget newColumn() {
   return Column(
     //主轴居中，竖直方向居中
@@ -114,5 +90,70 @@ Widget newColumn() {
             )),
       )
     ],
+  );
+}
+
+///一个页面的开始
+///如果是新页面，会自带返回键
+Widget _demoPage() {
+  return MaterialApp(
+    home: new Scaffold(
+      ///背景样式
+      backgroundColor: Colors.lightBlue,
+      appBar: new AppBar(
+        ///标题
+        title: new Text("Flutter"),
+      ),
+
+      ///正式的页面
+      ///创建一个集合,item20个
+      body: new ListView.builder(
+        itemBuilder: (_, index) {
+          return _iconDemoWidget();
+        },
+        itemCount: 20,
+      ),
+    ),
+  );
+}
+
+///IconDemoWidget
+Widget _iconDemoWidget() {
+  ///卡片布局
+  return new Card(
+    color: Colors.greenAccent,
+    child: new Directionality(
+      ///可点击的按钮
+      child: new FlatButton(
+        ///水平布局
+        child: new Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          textDirection: TextDirection.ltr,
+          children: <Widget>[
+            IconDemoWidget(
+              text: "998",
+              iconData: Icons.star,
+            ),
+            IconDemoWidget(
+              text: "58",
+              iconData: Icons.mail,
+            ),
+            IconDemoWidget(
+              text: "1000",
+              iconData: Icons.face,
+            )
+          ],
+        ),
+
+        ///点击事件
+        onPressed: () {
+          print("点击了");
+        },
+        padding: EdgeInsets.all(5),
+      ),
+      textDirection: TextDirection.ltr,
+    ),
   );
 }
