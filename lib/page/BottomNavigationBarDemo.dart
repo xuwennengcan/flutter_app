@@ -11,7 +11,8 @@ class BottomNavigationBarDemo extends StatefulWidget {
 }
 
 ///SingleTickerProviderStateMixin页面切换动画
-class _BottomNavigationBarState extends State with SingleTickerProviderStateMixin {
+class _BottomNavigationBarState extends State
+    with SingleTickerProviderStateMixin {
   ///页面控制器
   var _pageController = new PageController();
 
