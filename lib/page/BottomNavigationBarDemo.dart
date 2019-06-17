@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
 ///使用Scaffold+AppBar+BottomNavigationBar+PageView实现简单的页面切换效果
-void main() => runApp(TabBarWidgetDemo());
+void main() => runApp(BottomNavigationBarDemo());
 
-class TabBarWidgetDemo extends StatefulWidget {
+class BottomNavigationBarDemo extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _TabBarWidgetDemoState();
+    return _BottomNavigationBarState();
   }
 }
 
 ///SingleTickerProviderStateMixin页面切换动画
-class _TabBarWidgetDemoState extends State with SingleTickerProviderStateMixin {
+class _BottomNavigationBarState extends State with SingleTickerProviderStateMixin {
   ///页面控制器
   var _pageController = new PageController();
 
@@ -33,7 +33,7 @@ class _TabBarWidgetDemoState extends State with SingleTickerProviderStateMixin {
         ///标题
         appBar: AppBar(
           backgroundColor: Colors.red,
-          title: Text("TabBar Widget"),
+          title: Text("BottomNavigationBar"),
         ),
 
         ///主体
