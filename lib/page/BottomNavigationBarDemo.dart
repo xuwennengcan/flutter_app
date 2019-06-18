@@ -16,7 +16,7 @@ class _BottomNavigationBarState extends State
   ///页面控制器
   var _pageController = new PageController();
 
-  ///当前 页面下标
+  ///当前页面下标
   var _currentPage = 0;
 
   ///页面
@@ -32,6 +32,10 @@ class _BottomNavigationBarState extends State
     return MaterialApp(
       home: Scaffold(
         ///标题
+        appBar: AppBar(
+          backgroundColor: Colors.red,
+          title: Text("BottomNavigationBar"),
+        ),
 
         ///主体
         body: PageView(
