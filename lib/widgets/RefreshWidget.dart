@@ -18,9 +18,6 @@ class _RefreshWidgetState extends State<RefreshWidget> {
   ///列表数量
   var _itemCount = 15;
 
-  ///是否加载更多
-  var _isLoadMore = false;
-
   ///刷新回调
   Future<Null> _refresh() {
     return Future.delayed(Duration(seconds: 1), () {

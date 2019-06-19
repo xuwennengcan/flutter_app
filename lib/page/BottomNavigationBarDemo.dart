@@ -22,11 +22,11 @@ class _BottomNavigationBarState extends State
 
   ///页面
   var _pageWidgets = [
+    RefreshWidget(),
     newPage("首页"),
     newPage("社区"),
     newPage("消息"),
     //newPage("我的"),
-    RefreshWidget(),
   ];
 
   @override
