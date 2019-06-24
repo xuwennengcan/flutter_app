@@ -33,8 +33,10 @@ class _RefreshWidgetState extends State<RefreshWidget> {
     _scrollController.addListener(() {
       if (_scrollController.position.pixels ==
           _scrollController.position.maxScrollExtent) {
-        setState(() {
-          _itemCount += 15;
+        Future.delayed(Duration(seconds: 1),(){
+          setState(() {
+            _itemCount += 15;
+          });
         });
       }
     });
@@ -49,11 +51,11 @@ class _RefreshWidgetState extends State<RefreshWidget> {
 
       ///创建一个列表
       child: ListView.builder(
-        itemBuilder: (context, index) {
-          print("index=$index");
+        itemBuilder: (context, position) {
+          print("index=$position");
 
           ///相等时，显示加载更多控件
-          if (index == _itemCount) {
+          if (position == _itemCount) {
             return Container(
               padding: EdgeInsets.all(10),
               alignment: Alignment.center,
@@ -62,7 +64,7 @@ class _RefreshWidgetState extends State<RefreshWidget> {
           } else {
             ///显示列表
             return ListTile(
-              title: Text("item.............$index............."),
+              title: Text("position.............${position+1}............."),
             );
           }
         },
