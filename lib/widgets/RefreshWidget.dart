@@ -1,6 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_app/page/HomePage.dart';
+import 'package:flutter_app/utils/Routes.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 ///刷新控件：①下拉刷新 ②上拉加载更多
@@ -65,6 +67,9 @@ class _RefreshWidgetState extends State<RefreshWidget> {
             ///显示列表
             return ListTile(
               title: Text("position.............${position + 1}............."),
+              onTap: () {
+                routeWithPopPush(context, "/page1");
+              },
             );
           }
         },

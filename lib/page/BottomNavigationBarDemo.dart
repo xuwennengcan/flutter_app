@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/widgets/RefreshWidget.dart';
 
+import 'HomePage.dart';
+
 ///使用Scaffold+AppBar+BottomNavigationBar+PageView实现简单的页面切换效果
 void main() => runApp(BottomNavigationBarDemo());
 
@@ -23,15 +25,19 @@ class _BottomNavigationBarState extends State
   ///页面
   var _pageWidgets = [
     RefreshWidget(),
-    newPage("首页"),
+//    newPage("首页"),
     newPage("社区"),
     newPage("消息"),
-    //newPage("我的"),
+    newPage("我的"),
   ];
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      ///定义Route
+      routes: <String, WidgetBuilder>{
+        '/page1': (BuildContext context) => HomePage(),
+      },
       home: Scaffold(
         ///标题
         appBar: AppBar(
