@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 ///刷新控件：①下拉刷新 ②上拉加载更多
 
@@ -18,6 +19,9 @@ class _RefreshWidgetState extends State<RefreshWidget> {
   ///列表数量
   var _itemCount = 15;
 
+  ///是否需要加载更多
+  var _needMore = true;
+
   ///刷新回调
   Future<Null> _refresh() {
     return Future.delayed(Duration(seconds: 1), () {
@@ -33,7 +37,7 @@ class _RefreshWidgetState extends State<RefreshWidget> {
     _scrollController.addListener(() {
       if (_scrollController.position.pixels ==
           _scrollController.position.maxScrollExtent) {
-        Future.delayed(Duration(seconds: 1),(){
+        Future.delayed(Duration(seconds: 1), () {
           setState(() {
             _itemCount += 15;
           });
@@ -56,15 +60,11 @@ class _RefreshWidgetState extends State<RefreshWidget> {
 
           ///相等时，显示加载更多控件
           if (position == _itemCount) {
-            return Container(
-              padding: EdgeInsets.all(10),
-              alignment: Alignment.center,
-              child: Text("加载中..."),
-            );
+            return _buildMoreWidget();
           } else {
             ///显示列表
             return ListTile(
-              title: Text("position.............${position+1}............."),
+              title: Text("position.............${position + 1}............."),
             );
           }
         },
@@ -73,5 +73,30 @@ class _RefreshWidgetState extends State<RefreshWidget> {
       ),
       onRefresh: _refresh,
     );
+  }
+
+  //加载更多样式
+  Widget _buildMoreWidget() {
+    var moreWidget = _needMore
+        ? new Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              ///loading框
+              SpinKitRotatingCircle(
+                size: 14,
+                color: Colors.blue,
+              ),
+              Padding(padding: EdgeInsets.all(5)),
+              Text(
+                "加载中...",
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold),
+              )
+            ],
+          )
+        : Container();
+    return Padding(padding: const EdgeInsets.all(10), child: moreWidget);
   }
 }
