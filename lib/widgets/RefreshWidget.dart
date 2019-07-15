@@ -68,7 +68,7 @@ class _RefreshWidgetState extends State<RefreshWidget> {
             return ListTile(
               title: Text("position.............${position + 1}............."),
               onTap: () {
-                routeWithPopPush(context, "/page1");
+                routeWithName(context, "/page1");
               },
             );
           }
