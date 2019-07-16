@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 ///跳转到新的页面
 void routeWithName(BuildContext context, String routeName) {
@@ -21,3 +24,10 @@ void routeWithPopPush(BuildContext context, String routeName) {
   Navigator.popAndPushNamed(context, routeName);
 }
 
+///与原生Android交互
+Future jumpToAndroid() async {
+  //获取到插件与原生的交互通道
+  const jumpPlugin = const MethodChannel('test');
+  String result = await jumpPlugin.invokeMethod('test', "这是从Flutter传递过来的数据");
+  print(result);
+}

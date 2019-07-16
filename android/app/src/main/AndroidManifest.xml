@@ -1,4 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.can.flutterapp">
 
     <!-- The INTERNET permission is required for development. Specifically,
@@ -15,7 +16,8 @@
     <application
         android:name="io.flutter.app.FlutterApplication"
         android:label="flutter_app"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
@@ -35,5 +37,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".Router.TestParameterTransmitActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar"/>
+
     </application>
 </manifest>

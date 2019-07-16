@@ -68,7 +68,7 @@ class _RefreshWidgetState extends State<RefreshWidget> {
             return ListTile(
               title: Text("position.............${position + 1}............."),
               onTap: () {
-                routeWithName(context, "/page1");
+                jumpToAndroid();
               },
             );
           }
