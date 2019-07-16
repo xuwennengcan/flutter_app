@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/page/HomePage.dart';
 import 'package:flutter_app/utils/Routes.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
@@ -58,8 +57,6 @@ class _RefreshWidgetState extends State<RefreshWidget> {
       ///创建一个列表
       child: ListView.builder(
         itemBuilder: (context, position) {
-          print("index=$position");
-
           ///相等时，显示加载更多控件
           if (position == _itemCount) {
             return _buildMoreWidget();
@@ -68,7 +65,7 @@ class _RefreshWidgetState extends State<RefreshWidget> {
             return ListTile(
               title: Text("position.............${position + 1}............."),
               onTap: () {
-                jumpToAndroid();
+                routeWithName(context, "/page1");
               },
             );
           }

@@ -2,7 +2,6 @@ package com.can.flutterapp.Router
 
 import android.app.Activity
 import android.content.Intent
-import android.os.Build
 import android.util.Log
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
@@ -18,13 +17,11 @@ class FlutterJumpToAndroid(private val mActivity: Activity) : MethodChannel.Meth
         const val TEST = "test"
     }
 
-    var mChannel: MethodChannel? = null
-
     //注册插件
     fun register(registrar: PluginRegistry.Registrar) {
-        mChannel = MethodChannel(registrar.messenger(), TEST)
+        val mChannel = MethodChannel(registrar.messenger(), TEST)
         //添加通道回调
-        mChannel?.setMethodCallHandler(FlutterJumpToAndroid(registrar.activity()))
+        mChannel.setMethodCallHandler(FlutterJumpToAndroid(registrar.activity()))
     }
 
     override fun onMethodCall(call: MethodCall, result: MethodChannel.Result) {
@@ -38,6 +35,7 @@ class FlutterJumpToAndroid(private val mActivity: Activity) : MethodChannel.Meth
                 intent.putExtra("test", fromFlutter)
             mActivity.startActivity(intent)
 
+            //返回给Flutter的参数
             result.success("success")
         } else {
             result.notImplemented()

@@ -1,8 +1,11 @@
 package com.can.flutterapp.Router
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
+import com.can.flutterapp.MainActivity
 import com.can.flutterapp.R
 
 /**
@@ -19,11 +22,15 @@ class TestParameterTransmitActivity : Activity() {
 
         val string = intent?.getStringExtra("test")
 
-        mTvContent = findViewById(R.id.tv_content)
+        mTvContent = this.findViewById(R.id.tv_content)
 
-        if(!string.isNullOrEmpty())
+        if (!string.isNullOrEmpty())
             mTvContent?.text = string
 
+        //前往Flutter页面
+        this.findViewById<Button>(R.id.btn_go_flutter).setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+        }
     }
 
 }

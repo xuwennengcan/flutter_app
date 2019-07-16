@@ -25,9 +25,9 @@ void routeWithPopPush(BuildContext context, String routeName) {
 }
 
 ///与原生Android交互
-Future jumpToAndroid() async {
+Future jumpToAndroid(String from) async {
   //获取到插件与原生的交互通道
   const jumpPlugin = const MethodChannel('test');
-  String result = await jumpPlugin.invokeMethod('test', "这是从Flutter传递过来的数据");
+  String result = await jumpPlugin.invokeMethod('test', "这是从Flutter的$from页面传递过来的数据");
   print(result);
 }

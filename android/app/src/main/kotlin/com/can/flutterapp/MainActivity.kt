@@ -14,4 +14,13 @@ class MainActivity : FlutterActivity() {
         //注册Flutter与原生交互插件
         FlutterJumpToAndroid(this).register(registrarFor(FlutterJumpToAndroid.TEST))
     }
+
+    override fun onBackPressed() {
+        if (this.flutterView != null) {
+            this.flutterView.popRoute()
+        } else {
+            super.onBackPressed()
+        }
+
+    }
 }

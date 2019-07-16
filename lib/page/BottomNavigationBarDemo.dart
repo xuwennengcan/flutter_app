@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/widgets/RefreshWidget.dart';
-
+import 'package:flutter_app/utils/Routes.dart';
 import 'HomePage.dart';
 
 ///使用Scaffold+AppBar+BottomNavigationBar+PageView实现简单的页面切换效果
@@ -34,11 +34,13 @@ class _BottomNavigationBarState extends State
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
       ///定义Route
       routes: <String, WidgetBuilder>{
         '/page1': (BuildContext context) => HomePage(),
       },
       home: Scaffold(
+
         ///标题
         appBar: AppBar(
           backgroundColor: Colors.red,
@@ -83,8 +85,8 @@ List<BottomNavigationBarItem> getBottoms(int currentPage) {
 }
 
 ///获取底部按钮
-BottomNavigationBarItem getBottom(
-    int index, int currentPage, IconData icon, String text) {
+BottomNavigationBarItem getBottom(int index, int currentPage, IconData icon,
+    String text) {
   var color;
   if (index == currentPage)
     color = Colors.red;
@@ -110,8 +112,13 @@ Widget newIcon(Color color, IconData icon) {
 Widget newPage(String text) {
   return Container(
     alignment: Alignment.center,
-    child: Text(
-      text,
+    child: GestureDetector(
+      child: Text(
+        text,
+      ),
+      onTap: () {
+        jumpToAndroid(text);
+      },
     ),
   );
 }
