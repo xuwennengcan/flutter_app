@@ -6,7 +6,7 @@ void main() => runApp(LoginPage());
 //登录页面
 class LoginPage extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => _LoginPageState()
+  State<StatefulWidget> createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
@@ -89,7 +89,7 @@ Widget _widget() {
           ),
           //登录按钮
           SizedBox(
-            child: InkWell(
+            child: GestureDetector(
               //添加点击事件
               onTap: () {
                 _onLoginClick(userNameController.text, passwordController.text);
