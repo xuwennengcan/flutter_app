@@ -1,4 +1,4 @@
-package com.can.flutterapp.Router
+package com.can.flutterapp.router
 
 import android.app.Activity
 import android.content.Intent

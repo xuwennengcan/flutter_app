@@ -38,7 +38,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Router.TestParameterTransmitActivity"
+        <activity android:name=".router.TestParameterTransmitActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.NoActionBar"/>
 

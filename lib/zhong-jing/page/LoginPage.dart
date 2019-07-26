@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/zhong-jing/utils/ToastUtils.dart';
 import 'package:flutter_app/zhong-jing/utils/strings.dart';
 
 void main() => runApp(LoginPage());
@@ -117,4 +118,5 @@ Widget _widget() {
 
 _onLoginClick(String userName, String password) {
   print("userName = $userName , password = $password");
+  ToastUtils.showToast(msg: Strings.inputUserNameHint);
 }
