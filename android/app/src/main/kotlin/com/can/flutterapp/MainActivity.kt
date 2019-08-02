@@ -3,6 +3,7 @@ package com.can.flutterapp
 import android.os.Bundle
 import com.can.flutterapp.router.FlutterJumpToAndroid
 import com.can.flutterapp.router.FlutterToastMethod
+import com.can.flutterapp.router.FlutterToastMethod.Companion.TOAST
 
 import io.flutter.app.FlutterActivity
 import io.flutter.plugins.GeneratedPluginRegistrant
@@ -15,7 +16,7 @@ class MainActivity : FlutterActivity() {
         //注册Flutter与原生交互插件
         FlutterJumpToAndroid(this).register(registrarFor(FlutterJumpToAndroid.TEST))
         //注册Toast插件
-        FlutterToastMethod(this).register(registrarFor(FlutterToastMethod::class.java.name))
+        FlutterToastMethod(this).register(registrarFor(TOAST))
     }
 
     override fun onBackPressed() {

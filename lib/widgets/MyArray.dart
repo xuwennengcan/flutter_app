@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/utils/Toast.dart';
 
 class MyArray extends StatelessWidget {
 
   _pressButton(context,String string) {
     print(string);
-    Toast().addToast(context,string);
   }
 
   @override

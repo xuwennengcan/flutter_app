@@ -1,10 +1,16 @@
 import 'package:flutter/foundation.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+import 'package:flutter/services.dart';
 
 enum ToastType { SUCCESS, NORMAL, INFO, WARN, ERROR }
 
 class ToastUtils {
   static showToast({@required String msg, ToastType type}) async {
-    Fluttertoast.showToast(msg: msg);
+    const toastPlugin = const MethodChannel('toast');
+
+    final Map<String, dynamic> params = <String, dynamic>{
+      "msg": msg,
+    };
+
+    String result = await toastPlugin.invokeMethod("toast", params);
   }
 }
