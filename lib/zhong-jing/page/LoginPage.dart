@@ -23,7 +23,6 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
-
 }
 
 //用户名监听
@@ -118,5 +117,8 @@ Widget _widget() {
 
 _onLoginClick(String userName, String password) {
   print("userName = $userName , password = $password");
-  ToastUtils.showToast(msg: Strings.inputUserNameHint);
+  if (userName.isEmpty)
+    ToastUtils.showToast(msg: Strings.inputUserNameHint);
+  else if (password.isEmpty)
+    ToastUtils.showToast(msg: Strings.inputUserPasswordHint);
 }
